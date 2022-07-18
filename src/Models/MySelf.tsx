@@ -30,7 +30,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
+function Model({ ...props }: JSX.IntrinsicElements['group']) {
   const group = useRef<any>();
 
   const { nodes, materials, animations } = useGLTF(
@@ -108,3 +108,5 @@ export default function Model({ ...props }: JSX.IntrinsicElements['group']) {
 }
 
 useGLTF.preload('/glb/model-dancing.glb');
+
+export default Model;

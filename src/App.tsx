@@ -1,7 +1,7 @@
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
-import Model from './Models/Model';
+import { MySelf } from './Models';
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <directionalLight intensity={0.4} />
 
         <Suspense fallback={null}>
-          <Model position={[0.025, -0.9, 1]} />
+          <MySelf position={[0.025, -0.9, 1]} />
         </Suspense>
 
         <OrbitControls />
